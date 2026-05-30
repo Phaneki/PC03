@@ -50,3 +50,10 @@ La API cuenta con los siguientes endpoints RESTful para la gestión de Tareas:
 *   `POST /api/tareas` - Crea una nueva tarea. (Requiere Título, Estado, Prioridad y FechaVencimiento válida).
 *   `PUT /api/tareas/{id}` - Actualiza una tarea existente.
 *   `DELETE /api/tareas/{id}` - Elimina una tarea por su ID.
+
+## Endpoints Implementados (Tareas Externas)
+
+La API también consume información desde JSONPlaceholder (https://jsonplaceholder.typicode.com/todos). Estos datos se exponen transformados a nuestro propio formato:
+
+*   `GET /api/tareas-externas` - Obtiene la lista completa de tareas externas mapeadas a nuestro DTO (`externalId`, `titulo`, `completado`).
+*   `GET /api/tareas-externas/{id}` - Obtiene una tarea externa específica por su ID (devuelve 404 si el ID no existe).
