@@ -1,10 +1,12 @@
 using TaskApi.Data;
 using Microsoft.EntityFrameworkCore;
+using TaskApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<ITareasExternasService, TareasExternasService>();
 builder.Services.AddDbContext<TaskDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
