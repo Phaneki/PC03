@@ -41,7 +41,11 @@ Para trabajar con la base de datos (Entity Framework Core con SQLite), asegúrat
 
 La API cuenta con los siguientes endpoints RESTful para la gestión de Tareas:
 
-*   `GET /api/tareas` - Obtiene la lista completa de tareas.
+*   `GET /api/tareas` - Obtiene la lista de tareas. Soporta los siguientes filtros opcionales (búsqueda):
+    *   `?estado=Pendiente` (Filtra por estado: Pendiente, EnProceso, Completada)
+    *   `?prioridad=Alta` (Filtra por prioridad: Baja, Media, Alta)
+    *   `?fechaInicio=2026-05-01&fechaFin=2026-05-31` (Filtra por un rango de fechas de vencimiento)
+    *   *Ejemplo combinado:* `GET /api/tareas?estado=Pendiente&prioridad=Alta`
 *   `GET /api/tareas/{id}` - Obtiene una tarea específica por su ID.
 *   `POST /api/tareas` - Crea una nueva tarea. (Requiere Título, Estado, Prioridad y FechaVencimiento válida).
 *   `PUT /api/tareas/{id}` - Actualiza una tarea existente.
