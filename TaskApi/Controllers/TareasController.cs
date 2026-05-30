@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskApi.Data;
 using TaskApi.Models.Entities;
+using TaskApi.Models.Enums;
 
 namespace TaskApi.Controllers
 {
