@@ -57,3 +57,9 @@ La API también consume información desde JSONPlaceholder (https://jsonplacehol
 
 *   `GET /api/tareas-externas` - Obtiene la lista completa de tareas externas mapeadas a nuestro DTO (`externalId`, `titulo`, `completado`).
 *   `GET /api/tareas-externas/{id}` - Obtiene una tarea externa específica por su ID (devuelve 404 si el ID no existe).
+
+## Endpoints Implementados (Inteligencia Artificial - ML.NET)
+
+La API cuenta con un modelo de Machine Learning entrenado localmente con `Microsoft.ML`. El modelo utiliza el algoritmo de clasificación multiclase `SdcaMaximumEntropy` para evaluar el texto (título y descripción) y predecir qué nivel de prioridad corresponde (Alta, Media o Baja) en base a un dataset predefinido.
+
+*   `POST /api/ml/recomendar-prioridad` - Recibe un JSON con `titulo` y `descripcion` y devuelve la `prioridadRecomendada`. El modelo lee y aprende automáticamente del archivo `ML/priority-dataset.csv`.

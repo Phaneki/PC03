@@ -1,0 +1,16 @@
+Titulo,Descripcion,Prioridad
+Error crítico en producción,El sistema no permite registrar nuevas tareas,Alta
+Actualizar colores,Cambiar el color del botón principal a azul,Baja
+Caída del servidor,Los usuarios no pueden acceder al sistema web,Alta
+Falta de tilde,Corregir error ortográfico en la página de inicio,Baja
+Nueva funcionalidad,Crear botón para exportar a PDF,Media
+Base de datos corrupta,Pérdida de datos en la tabla principal,Alta
+Revisar log,El archivo de log tiene algunas advertencias menores,Baja
+Optimizar consulta,La página de reporte carga lento,Media
+Mejorar rendimiento,El listado principal toma 3 segundos,Media
+Ajustar margen,El botón está muy pegado al borde,Baja
+Fallo al procesar pago,Los clientes no pueden finalizar compras,Alta
+Refactorización menor,Renombrar variable para que sea más clara,Baja
+Bug en carrito,El total no se calcula bien a veces,Alta
+Añadir filtro,Se necesita filtrar tareas por fecha,Media
+Quitar espacio extra,Hay un doble espacio en el pie de página,Baja

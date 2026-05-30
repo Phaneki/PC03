@@ -1,6 +1,28 @@
 @TaskApi_HostAddress = http://localhost:5231
 
-GET {{TaskApi_HostAddress}}/weatherforecast/
-Accept: application/json
+### Pregunta 1: Crear una tarea
+POST {{TaskApi_HostAddress}}/api/tareas
+Content-Type: application/json
 
-###
+{
+  "titulo": "Mi primera tarea",
+  "descripcion": "Probando que el POST funciona",
+  "estado": "Pendiente",
+  "prioridad": "Alta",
+  "fechaVencimiento": "2026-12-31"
+}
+
+### Pregunta 2: Filtrar tareas por estado
+GET {{TaskApi_HostAddress}}/api/tareas?estado=Pendiente
+
+### Pregunta 3: Consumir API externa
+GET {{TaskApi_HostAddress}}/api/tareas-externas
+
+### Pregunta 4: Recomendar prioridad con Inteligencia Artificial
+POST {{TaskApi_HostAddress}}/api/ml/recomendar-prioridad
+Content-Type: application/json
+
+{
+  "titulo": "Error crítico en producción",
+  "descripcion": "El sistema no permite registrar nuevas tareas"
+}
